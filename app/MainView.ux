@@ -9,7 +9,9 @@
       <PageControl ux:Name="navbar">
           <Each Items="{pages}">
               <Page Color="{}">
-
+                <Grid RowCount="1" ColumnCount="6">
+                  <Rectangle Row="0" Column="0" Color="#37474f"/>
+                </Grid>
               </Page>
           </Each>
       </PageControl>
