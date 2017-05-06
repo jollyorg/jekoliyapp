@@ -6,12 +6,12 @@
           var Observable = require("FuseJS/Observable");
           module.exports.pages = Observable("#4527a0", "#536dfe", "#448aff");
       </JavaScript>
+      <Grid RowCount="1" ColumnCount="6">
+        <Rectangle Row="0" Column="0" Color="#37474f"/>
+      </Grid>
       <PageControl ux:Name="navbar">
           <Each Items="{pages}">
               <Page Color="{}">
-                <Grid RowCount="1" ColumnCount="6">
-                  <Rectangle Row="0" Column="0" Color="#37474f"/>
-                </Grid>
               </Page>
           </Each>
       </PageControl>
