@@ -1,27 +1,17 @@
 <App>
   <Font File="Assets\Fonts\Roboto\Roboto-Black.ttf" ux:Global="Roboto" />
 
-  <DockPanel>
-      <JavaScript>
-          var Observable = require("FuseJS/Observable");
-          module.exports.pages = Observable("#4527a0", "#536dfe", "#448aff");
-      </JavaScript>
-      <Grid RowCount="1" ColumnCount="6">
-        <Rectangle Row="0" Column="0" Color="#37474f"/>
-      </Grid>
-      <PageControl ux:Name="navbar">
-          <Each Items="{pages}">
-              <Page Color="{}">
-              </Page>
-          </Each>
-      </PageControl>
-      <PageIndicator Dock="Bottom" Navigation="navbar" Alignment="Center" Color="#263238" Width="100%">
-          <Rectangle ux:Template="Dot" Width="30" Height="30" Margin="20" CornerRadius="15" Color="#80d8ff">
-            <Text Alignment="Center" FontSize="11" Font="Roboto" Color="Black">A</Text>
-              <ActivatingAnimation>
-                  <Scale Factor="1.2" />
-              </ActivatingAnimation>
-          </Rectangle>
-      </PageIndicator>
-  </DockPanel>
+  <Rectangle Layer="Background">
+    <ImageFill Url="http://unsplash.it/720/1280/?random" WrapMode="ClampToEdge"/>
+  </Rectangle>
+
+  <Grid ux:Name="loginForm" Row="1" Columns="auto,1*" Padding="0,20" RowCount="2" Height="170" MaxWidth="400">
+    <Image     Row="0" Column="0" File="Assets/Images/user_icon.png" Width="20" Height="20" Margin="10,0,30,0" Alignment="Left"/>
+    <TextInput Row="0" Column="1" PlaceholderText="Username" PlaceholderColor="#999" TextColor="#fff" CaretColor="#fff" />
+    <Rectangle Row="0" Column="0" Alignment="Bottom" ColumnSpan="2" Height="1" Color="#fff"/>
+
+    <Image     Row="1" Column="0" File="Assets/Images/password_icon.png" Width="20" Height="20" Margin="10,0,30,0" Alignment="Left"/>
+    <TextInput Row="1" Column="1" PlaceholderText="Password" PlaceholderColor="#999" TextColor="#fff" CaretColor="#fff" IsPassword="true"/>
+    <Rectangle Row="1" Column="0" Alignment="Bottom" ColumnSpan="2" Height="1" Color="#fff"/>
+  </Grid>
 </App>
