@@ -1,0 +1,25 @@
+<App>
+  <Font File="Assets\Fonts\Roboto\Roboto-Black.ttf" ux:Global="Roboto" />
+
+  <DockPanel>
+      <JavaScript>
+          var Observable = require("FuseJS/Observable");
+          module.exports.pages = Observable("#7c4dff", "#536dfe", "#448aff");
+      </JavaScript>
+      <PageControl ux:Name="navbar">
+          <Each Items="{pages}">
+              <Page Color="{}">
+
+              </Page>
+          </Each>
+      </PageControl>
+      <PageIndicator Dock="Bottom" Navigation="navbar" Alignment="Center" Color="#01579b" Width="100%">
+          <Rectangle ux:Template="Dot" Width="30" Height="30" Margin="20" CornerRadius="15" Color="#80d8ff">
+            <Text Alignment="Center" FontSize="14" Font="Roboto">A</Text>
+              <ActivatingAnimation>
+                  <Scale Factor="1.2" />
+              </ActivatingAnimation>
+          </Rectangle>
+      </PageIndicator>
+  </DockPanel>
+</App>
