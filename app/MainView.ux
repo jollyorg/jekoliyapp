@@ -3,18 +3,23 @@
 
   <Rectangle Layer="Background">
     <ImageFill Url="http://unsplash.it/g/720/1280/?random" WrapMode="ClampToEdge"/>
+    <Blur Radius="4" />
+    <Halftone DotTint="0" PaperTint="0.95" Intensity="0.9" Smoothness="2" Spacing="4" />
   </Rectangle>
 
   <Page ux:Name="PageLogin">
-    <Grid ux:Name="LoginForm" Row="1" Columns="auto,1*" Padding="25" RowCount="2" Height="170" MaxWidth="340" Background="#004d40">
-      <!--username-->
-      <Image     Row="0" Column="0" File="Assets/Images/user_icon.png" Width="20" Height="20" Margin="10,0,30,0" Alignment="Left" />
-      <TextInput Row="0" Column="1" PlaceholderText="Username" PlaceholderColor="#999" TextColor="#fff" CaretColor="#fff" />
-      <Rectangle Row="0" Column="0" Alignment="Bottom" ColumnSpan="2" Height="1" Color="#fff" />
-      <!--password-->
-      <Image     Row="1" Column="0" File="Assets/Images/password_icon.png" Width="20" Height="20" Margin="10,0,30,0" Alignment="Left" />
-      <TextInput Row="1" Column="1" PlaceholderText="Password" PlaceholderColor="#999" TextColor="#fff" CaretColor="#fff" IsPassword="true" />
-      <Rectangle Row="1" Column="0" Alignment="Bottom" ColumnSpan="2" Height="1" Color="#fff" />
-    </Grid>
+    <Rectangle CornerRadius="5" Margin="10" Color="#004d40" Height="170" MaxWidth="340">
+      <DropShadow Size="20" Distance="3" Spread="0.05" Color="#0008" Angle="90" />
+      <Grid ux:Name="LoginForm" Row="1" Columns="auto,1*" Padding="20" RowCount="2" Height="170" MaxWidth="340">
+        <!--username-->
+        <Image     Row="0" Column="0" File="Assets/Images/user_icon.png" Width="20" Height="20" Margin="10,0,30,0" Alignment="Left" />
+        <TextInput Row="0" Column="1" PlaceholderText="Username" PlaceholderColor="#999" TextColor="#fff" CaretColor="#fff" />
+        <Rectangle Row="0" Column="0" Alignment="Bottom" ColumnSpan="2" Height="1" Color="#fff" />
+        <!--password-->
+        <Image     Row="1" Column="0" File="Assets/Images/password_icon.png" Width="20" Height="20" Margin="10,0,30,0" Alignment="Left" />
+        <TextInput Row="1" Column="1" PlaceholderText="Password" PlaceholderColor="#999" TextColor="#fff" CaretColor="#fff" IsPassword="true" />
+        <Rectangle Row="1" Column="0" Alignment="Bottom" ColumnSpan="2" Height="1" Color="#fff" />
+      </Grid>
+    </Rectangle>
   </Page>
 </App>
