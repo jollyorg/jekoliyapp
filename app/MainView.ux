@@ -1,25 +1,42 @@
 <App>
-  <Font File="Assets\Fonts\Roboto\Roboto-Black.ttf" ux:Global="Roboto" />
+  <JavaScript File="MainControl.js" />
+  <Font File="Assets/Fonts/Roboto/Roboto-Black.ttf" ux:Global="Roboto" />
+  <JavaScript>
+    var Observable = require("FuseJS/Observable");
+  </JavaScript>
 
   <Rectangle Layer="Background">
-    <ImageFill Url="http://unsplash.it/g/720/1280/?random" WrapMode="ClampToEdge"/>
-    <Blur Radius="4" />
+    <ImageFill ux:Name="BackgroundImage" Url="http://unsplash.it/g/720/1280/?random" WrapMode="ClampToEdge"/>
     <Halftone DotTint="1" PaperTint="0.95" Intensity="0.9" Smoothness="2" Spacing="6" />
   </Rectangle>
 
   <Page ux:Name="PageLogin">
-    <Rectangle CornerRadius="5" Margin="10" Color="#004d40" Height="170" MaxWidth="340">
+    <!--logo&logo housing-->
+    <Rectangle Width="350" Height="220" CornerRadius="12" Alignment="TopCenter" Margin="25" Color="#00bfa5">
       <DropShadow Size="20" Distance="3" Spread="0.05" Color="#0008" Angle="90" />
+      <Rectangle Width="175" Height="175" CornerRadius="10">
+        <DropShadow Size="20" Distance="3" Spread="0.05" Color="#0008" Angle="90" />
+        <ImageFill File="Assets/Images/logo.png"/>
+      </Rectangle>
+    </Rectangle>
+    <!--login form itself-->
+    <Rectangle CornerRadius="5" Margin="10" Color="#004d40" Height="180" Width="350">
+      <DropShadow Size="40" Distance="3" Spread="0.05" Color="#0008" Angle="90" />
       <Grid ux:Name="LoginForm" Row="1" Columns="auto,1*" Padding="20" RowCount="2" Height="170" MaxWidth="340">
         <!--username-->
         <Image     Row="0" Column="0" File="Assets/Images/user_icon.png" Width="20" Height="20" Margin="10,0,30,0" Alignment="Left" />
-        <TextInput Row="0" Column="1" PlaceholderText="Username" PlaceholderColor="#999" TextColor="#fff" CaretColor="#fff" />
+        <TextInput Row="0" Column="1" PlaceholderText="Username" PlaceholderColor="#999"
+          TextColor="#fff" CaretColor="#fff" Value="{username}" />
         <Rectangle Row="0" Column="0" Alignment="Bottom" ColumnSpan="2" Height="1" Color="#fff" />
         <!--password-->
         <Image     Row="1" Column="0" File="Assets/Images/password_icon.png" Width="20" Height="20" Margin="10,0,30,0" Alignment="Left" />
-        <TextInput Row="1" Column="1" PlaceholderText="Password" PlaceholderColor="#999" TextColor="#fff" CaretColor="#fff" IsPassword="true" />
+        <TextInput Row="1" Column="1" PlaceholderText="Password" PlaceholderColor="#999"
+          TextColor="#fff" CaretColor="#fff" IsPassword="true" Value="{password}" />
         <Rectangle Row="1" Column="0" Alignment="Bottom" ColumnSpan="2" Height="1" Color="#fff" />
       </Grid>
+      <Rectangle Alignment="Bottom" Height="3" CornerRadius="30">
+          <SolidColor Color="#00bfa5"/>
+      </Rectangle>
     </Rectangle>
   </Page>
 </App>
