@@ -4,7 +4,7 @@
   <Rectangle Layer="Background">
     <ImageFill Url="http://unsplash.it/g/720/1280/?random" WrapMode="ClampToEdge"/>
     <Blur Radius="4" />
-    <Halftone DotTint="0" PaperTint="0.95" Intensity="0.9" Smoothness="2" Spacing="4" />
+    <Halftone DotTint="1" PaperTint="0.95" Intensity="0.9" Smoothness="2" Spacing="6" />
   </Rectangle>
 
   <Page ux:Name="PageLogin">
