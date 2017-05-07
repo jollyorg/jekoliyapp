@@ -2,7 +2,7 @@
   <Font File="Assets\Fonts\Roboto\Roboto-Black.ttf" ux:Global="Roboto" />
 
   <Rectangle Layer="Background">
-    <ImageFill Url="http://unsplash.it/720/1280/?random" WrapMode="ClampToEdge"/>
+    <ImageFill Url="http://unsplash.it/g/720/1280/?random" WrapMode="ClampToEdge"/>
   </Rectangle>
 
   <Grid ux:Name="loginForm" Row="1" Columns="auto,1*" Padding="0,20" RowCount="2" Height="170" MaxWidth="400">
